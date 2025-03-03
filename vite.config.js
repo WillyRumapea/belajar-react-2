@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       wishlist_app: "wishlist_app.html",
       shopping_cart: "shopping_cart.html",
+      voting_app: "voting_app.html",
     },
   },
 });

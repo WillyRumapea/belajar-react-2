@@ -1,5 +1,5 @@
 export default function ListItem({ items, dispatch }) {
-  const totalPrice = items.reduce((sum, item) => sum + item.price, 0);
+  const totalPrice = items.reduce((sum, item) => sum + item.totalPrice, 0);
 
   return (
     <div>
@@ -9,7 +9,7 @@ export default function ListItem({ items, dispatch }) {
           return (
             <li key={item.id}>
               {item.name}
-              <p>Rp {item.price}</p>
+              <p>Rp {item.totalPrice}</p>
               <div>
                 <button
                   onClick={() => dispatch({ type: "ADD_AMOUNT", id: item.id })}

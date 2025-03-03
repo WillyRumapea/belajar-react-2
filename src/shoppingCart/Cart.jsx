@@ -13,6 +13,7 @@ function cartReducer(state, action) {
           name: action.name,
           amount: action.amount,
           price: action.price,
+          totalPrice: action.price * action.amount,
         },
       ];
       console.log(newItem);
@@ -22,12 +23,22 @@ function cartReducer(state, action) {
       return state.filter((item) => item.id !== action.id);
     case "ADD_AMOUNT":
       return state.map((item) =>
-        item.id === action.id ? { ...item, amount: item.amount + 1 } : item
+        item.id === action.id
+          ? {
+              ...item,
+              amount: item.amount + 1,
+              totalPrice: item.price * (item.amount + 1),
+            }
+          : item
       );
     case "REDUCE_AMOUNT":
       return state.map((item) =>
         item.id === action.id
-          ? { ...item, amount: Math.max(item.amount - 1, 1) }
+          ? {
+              ...item,
+              amount: Math.max(item.amount - 1, 1),
+              totalPrice: item.price * Math.max(item.amount - 1, 1),
+            }
           : item
       );
     default:
