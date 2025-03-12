@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "fresh tea apple",
+    "price": 7000
+  },
+  {
+    "id": 2,
+    "name": "bear brand",
+    "price": 9600
+  },
+  {
+    "id": 3,
+    "name": "indomie kari ayam",
+    "price": 3000
+  },
+  {
+    "id": 4,
+    "name": "kahf facial wash",
+    "price": 38000
+  },
+  {
+    "id": 5,
+    "name": "garry malkist keju",
+    "price": 9000
+  }
+]
