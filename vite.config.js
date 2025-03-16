@@ -10,6 +10,7 @@ export default defineConfig({
       shopping_cart: "shopping_cart.html",
       voting_app: "voting_app.html",
       product: "product.html",
+      online: "online.html",
     },
   },
 });
